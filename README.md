@@ -15,7 +15,6 @@ Este script automatiza el proceso de instalación de Docker y Docker Compose en 
 
 - Sistema operativo Debian 12 (Bookworm)
 - Acceso root o privilegios sudo
-- Conexión a Internet
 
 ## 💻 Instalación
 
@@ -24,25 +23,25 @@ Este script automatiza el proceso de instalación de Docker y Docker Compose en 
 git clone https://github.com/frbadillo/Install_Docker.git
 ```
 
-2. Otorgue permisos de ejecución al script:
+2. Otorgar permisos de ejecución al script:
 ```bash
 chmod +x install_docker.sh
 ```
 
-3. Ejecute el script con privilegios sudo:
+3. Ejecutar el script con privilegios sudo:
 ```bash
 sudo ./install_docker.sh
 ```
 
 ## ⚙️ ¿Qué hace el script?
 
-1. Actualiza el sistema
-2. Instala paquetes y dependencias necesarias
-3. Configura el repositorio oficial de Docker
-4. Instala Docker Engine y Docker Compose
-5. Inicia y habilita el servicio Docker
-6. Añade el usuario actual al grupo Docker (si se ejecuta con sudo)
-7. Verifica la instalación mostrando las versiones instaladas
+1. Actualizar el sistema
+2. Instalar paquetes y dependencias necesarias
+3. Configurar el repositorio oficial de Docker
+4. Instalar Docker Engine y Docker Compose
+5. Iniciar y habilitar el servicio Docker
+6. Añadir el usuario actual al grupo Docker (si se ejecuta con sudo)
+7. Verificar la instalación mostrando las versiones instaladas
 
 ## ⚠️ Notas importantes
 
@@ -62,13 +61,13 @@ docker run hello-world
 
 ## 🛠️ Solución de problemas
 
-Si encuentra el error "Permission denied":
+Si se encuentra el error "Permission denied":
 1. Verifique que se haya agregado al grupo Docker:
 ```bash
 groups
 ```
-2. Si no ve 'docker' en la lista, ejecute:
+2. Si no ve 'docker' en la lista, ejecutar:
 ```bash
 sudo usermod -aG docker $USER
 ```
-3. Cierre sesión y vuelva a iniciarla
+3. Cerrar sesión y volver a iniciarla
